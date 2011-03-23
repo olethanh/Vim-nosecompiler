@@ -1,7 +1,8 @@
 " Vim compiler file
 " Compiler:	Unit testing for Python using nose
 " Maintainer:	Olivier Le Thanh Duong <olivier@lethanh.be>
-" Last Change: 2010 Sep 1
+" Contributor: Marcus Carlsson <carlsson.marcus@gmail.com>
+" Last Change: 2011 Mar 23
 
 " Based on pyunit.vim distributed with vim
 " Compiler:	Unit testing tool for Python
@@ -23,5 +24,5 @@ CompilerSet efm=%-C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m,%
 "" Set nose as default compiler
 " CompilerSet makeprg=nosetests
 " Quite ugly but this make it ignore vim-makegreen passing argument for now
-CompilerSet makeprg=echo\ $*\ >/dev/null;\ nosetests
+CompilerSet makeprg=echo\ $*\ >/dev/null;\ python\ $(which\ nosetests)
 
